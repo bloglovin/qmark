@@ -6,7 +6,9 @@
  */
 
 !function (name, context, definition) {
-
+  if (typeof define == 'function') define(definition)
+  else if (typeof module != 'undefined') module.exports = definition()
+  else context[name] = definition()
 }('qmark', this, function () {
 
   /**
@@ -14,7 +16,7 @@
    * @param {string} name of the target parameter.
    * @returns {string} value of given query param.
    */
-  var getQueryParam = function (name) { //TODO (david) put this in a module w/ its own tests.
+  return function (name) { //TODO (david) put this in a module w/ its own tests.
     var queryString = {}
     window.location.href.replace(
       new RegExp("([^?=&]+)(=([^&]*))?", "g"),
@@ -22,7 +24,5 @@
     )
     return name ? queryString[name] : queryString
   }
-
-  return getQueryParam
 
 })
