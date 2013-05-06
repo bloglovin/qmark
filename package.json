@@ -1,0 +1,19 @@
+{
+    "name":"qmark"
+  , "description": "A blazing fast query string parser"
+  , "version": "0.0.1"
+  , "homepage": "http://github.com/bloglovin/qmark"
+  , "author": "David Byrd <david@byrdhou.se>"
+  , "main": "./qmark.js"
+  , "ender": "./src/ender.js"
+  , "keywords": ["ender", "query string", "query param", "url param", "bloglovin"]
+  , "repository": {
+      "type": "git"
+    , "url": "https://github.com/bloglovin/qmark"
+  }
+  , "devDependencies": {
+      "smoosh": "0.4.x"
+    , "sink-test": ">= 0.0.8"
+    , "node-static": "0.6.9"
+  }
+}
