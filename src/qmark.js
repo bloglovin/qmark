@@ -11,7 +11,7 @@
    */
   return function (name) { //TODO (david) put this in a module w/ its own tests.
     var queryString = {}
-    window.location.href.replace(
+    window.location.search.replace(
       new RegExp("([^?=&]+)(=([^&]*))?", "g"),
       function($0, $1, $2, $3) { queryString[$1] = $3 }
     )
