@@ -10,7 +10,7 @@ sink('qmark', function (test, ok) {
   test('should parse query parameter for /!#/ routes', function () {
     window.history.pushState("test-state-2", "Tests", "/#!/blah?foo=bar&bar=foo")
     ok(qmark('foo') == 'bar', 'parses first param')
-    ok(qmark('bar') == 'food', 'parses second param')
+    ok(qmark('bar') == 'foo', 'parses second param')
   })
 
   test('should give back an object', 2, function () {
