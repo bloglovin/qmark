@@ -7,7 +7,7 @@ sink('qmark', function (test, ok) {
     ok(qmark('id') == '123', 'parses second param')
   })
 
-  test('should parse query parameter for /!#/ routes', s2, function () {
+  test('should parse query parameter for /!#/ routes', 2, function () {
     window.history.pushState("test-state-2", "Tests", "/tests/tests.html/#!/blah?foo=bar&bar=foo")
     ok(qmark('foo') == 'bar', 'parses first param')
     ok(qmark('bar') == 'foo', 'parses second param')
